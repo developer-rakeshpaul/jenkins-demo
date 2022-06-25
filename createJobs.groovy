@@ -22,7 +22,7 @@ pipelineJob('spring-boot-api-job') {
     }
 }
 
-pipelineJob('spring-boot-api-job') {
+pipelineJob('spring-boot-api-job-docker') {
     definition {
         cpsScm {
             scm {
