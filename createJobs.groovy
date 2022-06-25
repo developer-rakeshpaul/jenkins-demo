@@ -21,3 +21,19 @@ pipelineJob('spring-boot-api-job') {
         }
     }
 }
+
+pipelineJob('spring-boot-api-job') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url 'https://github.com/developer-rakeshpaul/jenkins-spring-boot-api.git'
+                    }
+                    branch 'main'
+                    scriptPath 'Jenkinsfile-docker'
+                }
+            }
+        }
+    }
+}
