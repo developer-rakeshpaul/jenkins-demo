@@ -1,4 +1,7 @@
 import org.gradle.nativeplatform.platform.internal.DefaultNativePlatform
+import org.apache.tools.ant.taskdefs.condition.Os
+
+
 
 plugins {
     id 'base'
@@ -15,7 +18,7 @@ docker {
 }
 
 Process process
-if (DefaultNativePlatform.getCurrentOperatingSystem().isWindows()) {
+if (DefaultNativePlatform.getCurrentOperatingSystem().isWindows() || Os.isFamily(Os.FAMILY_MAC)) {
     process = "docker run --rm -v /var/run/docker.sock:/var/run/docker.sock alpine stat -c %g /var/run/docker.sock".execute()
 } else if (DefaultNativePlatform.getCurrentOperatingSystem().isLinux()) {
     process = "stat -c %g /var/run/docker.sock".execute()
