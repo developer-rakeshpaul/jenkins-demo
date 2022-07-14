@@ -1,6 +1,6 @@
-authorize-project:1.4.0
-job-dsl:1.79
-workflow-aggregator:2.6
-git:4.11.3
-aws-credentials:1.32
-pipeline-aws:1.43
+authorize-project:latest
+job-dsl:latest
+workflow-aggregator:latest
+git:latest
+aws-credentials:latest
+pipeline-aws:latest
