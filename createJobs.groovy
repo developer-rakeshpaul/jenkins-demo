@@ -46,7 +46,7 @@ pipelineJob('spring-boot-api-job-aws') {
                     remote {
                         url 'https://github.com/developer-rakeshpaul/jenkins-spring-boot-api.git'
                     }
-                    branch 'master'
+                    branch 'main'
                     scriptPath('Jenkinsfile-aws')
                 }
             }
